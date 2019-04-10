@@ -13,18 +13,19 @@ export default {
         const interestArticle = document.createElement("article");
         const interestHeader = document.createElement("h3")
         interestHeader.textContent = interest.name;
-        console.log(interestHeader)
+
         const interestLocationParagraph = document.createElement("p")
         interestLocationParagraph.id = `location--${interest.id}`;
         interestLocationParagraph.textContent = interest.place.location;
-        console.log(interestLocationParagraph)
+
         const interestDescriptionParagraph = document.createElement("p");
         interestDescriptionParagraph.id = `description--${interest.id}`;
         interestDescriptionParagraph.textContent = interest.description;
-        console.log(interestDescriptionParagraph)
+
         const interestCostParagraph = document.createElement("p");
         interestCostParagraph.id = `cost--${interest.cost}`;
         interestCostParagraph.textContent = interest.cost;
+
         const interestReviewParagraph = document.createElement("p");
         interestReviewParagraph.id = `review--${interest.id}`;
         interestReviewParagraph.textContent = interest.review;
@@ -35,8 +36,19 @@ export default {
         interestArticle.appendChild(interestCostParagraph);
         interestArticle.appendChild(interestReviewParagraph);
 
-        console.log(interestArticle)
         return interestArticle
-    }
+    },
+    // This is the method to build a form for the user to track a new point of interest.
+    buildInterestForm () {
+        const newInterestArticle = document.createElement("article");
+        newInterestArticle.id = "newInterestArticle"
 
+        const newInterestNameLabel = document.createElement("label");
+        newInterestNameLabel.id = "newInterestLabel"
+        newInterestNameLabel.textContent = "Name: "
+
+        const newInterestNameInput = document.createElement("input");
+
+        console.log(newInterestArticle, newInterestLabel)
+    }
 }
