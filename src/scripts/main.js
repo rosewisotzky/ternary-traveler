@@ -4,6 +4,6 @@ import placesAPI from "./placesCollection"
 import form from "./placesForm"
 import listSavedPlaces from "./listPlaces"
 
-console.log(placesAPI.getPlaces())
+console.log(placesAPI.getInterests())
 // form.buildPlacesHTML()
-listSavedPlaces.listAllPlaces()
+listSavedPlaces.listAllInterests()
