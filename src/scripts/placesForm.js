@@ -1,9 +1,12 @@
 import placesAPI from "./placesCollection"
-import htmlFunction from "./domManager"
+import build from "./places"
 
 export default {
-    buildPlacesHTML (placesObject) {
-        const placesArticle = htmlFunction.buildHTMLElement("article", `places--${placesObject.name}`)
-        console.log(placesArticle)
+    // This method selects the empty container in our index.html and calls the buildInterestForm method and appends that to the display container.
+    appendNewInterestForm () {
+        const displayContainer = document.querySelector("#main-container")
+        displayContainer.appendChild(build.buildInterestForm())
+
+
     }
 }
