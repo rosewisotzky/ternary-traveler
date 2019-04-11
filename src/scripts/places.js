@@ -40,9 +40,10 @@ export default {
     },
     // This is the method to build a form for the user to track a new point of interest.
     buildInterestForm() {
+        // We are building an article to contain our form.
         const newInterestArticle = document.createElement("article");
         newInterestArticle.id = "newInterestArticle"
-
+        // Inside of our form we want a label and input for the name, destination, and cost, so we are using createElement to make them and append them to our article.
         const newInterestNameLabel = document.createElement("label");
         newInterestNameLabel.id = "newInterestLabel"
         newInterestNameLabel.textContent = "Name: "
@@ -68,7 +69,7 @@ export default {
         const newInterestCostInput = document.createElement("input");
         newInterestCostInput.id = "newInterestCostInput";
         newInterestArticle.appendChild(newInterestCostInput);
-
+        // Here we are building our dropdown to select where we want to add our new point of interest.
         const newInterestDropdown = document.createElement("select");
         newInterestDropdown.id = "newInterestPlace";
         newInterestDropdown.name = "Location"
@@ -91,7 +92,7 @@ export default {
         newInterestOption3.value = "rioDeJaneiro";
         newInterestOption3.textContent = "Rio de Janeiro";
         newInterestDropdown.appendChild(newInterestOption3);
-
+        // We are creating a button that says 'Save New Interest' to our form, to which we will add functionality to POST it to our database.
         const saveNewInterestButton = document.createElement("button");
         saveNewInterestButton.id = "saveNewInterest";
         saveNewInterestButton.textContent = "Save New Interest";
